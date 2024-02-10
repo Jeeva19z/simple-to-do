@@ -1,0 +1,22 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+.container{
+    margin: 50px;
+}
+.row{
+    display: flex;
+justify-content: space-evenly;
+}
+#text{
+  padding: 10px;  
+}
+.add{
+    padding: 10px;
+
+}
+
+

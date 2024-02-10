@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo list</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      
+        <div class="row">
+
+             <div class="col">
+                 <input type="text" name="" id="text">
+                 <button class="add">add</button>
+             </div>
+
+
+              <div class="col">
+                <p>Output : </p>
+
+                     <ol id="output">
+                        
+
+                     </ol>
+              </div>
+
+     
+       </div>
+    </div>
+    <script>
+
+        
+document.querySelector(".add").addEventListener("click",function(){
+
+let InputValue = document.getElementById("text").value;
+let OutputValue = document.getElementById("output");
+
+
+var newLiTag=document.createElement("li");
+newLiTag.textContent=InputValue;
+OutputValue.appendChild(newLiTag)
+
+let OutputValueOuside = document.querySelectorAll("#output li");
+
+
+  
+
+
+    OutputValueOuside.forEach(li => {
+      li.addEventListener("click", function() {
+        li.style.textDecoration='line-through';
+        // li.remove();
+        
+
+      });
+
+      li.addEventListener("dblclick",function(){
+        li.remove();
+      })
+    });
+
+
+
+})
+
+
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>
